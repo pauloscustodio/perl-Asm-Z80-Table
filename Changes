@@ -1,0 +1,26 @@
+0.01	2010-11-20
+
+	Bug Fixes
+	* ...
+	* ...
+
+	New Features
+	* ...
+	* ...
+
+	Feature Changes
+	* ...
+	* ...
+
+	Other
+	* ...
+	* ...
+
+Revision history for Asm-Z80-Table
+
+0.01    2010-11-20
+	* Spin off CPU::Z80::Assembler, to be usable by other modules
+	Changes from original CPU::Z80::Assembler::AsmTable:
+	* Accept 'jr <po|pe|p|m>,NN', compile 'jp ...' instead
+	* do not support variants of ixh, ixl, iyh, iyl
+	* do not support [] instead of ()
