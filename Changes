@@ -1,5 +1,12 @@
 Revision history for Asm-Z80-Table
 
+0.02	2010-11-21
+	Bug Fixes
+	* POD update
+	New Features
+	* The RST instruction takes as its parameter either the address to jump to 
+	  or the reset vector number - this is just the address / 8.
+
 0.01    2010-11-20
 	* Spin off CPU::Z80::Assembler, to be usable by other modules
 	Changes from original CPU::Z80::Assembler::AsmTable:

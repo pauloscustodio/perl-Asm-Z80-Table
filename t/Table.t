@@ -1,6 +1,6 @@
 #!perl
 
-# $Id: AsmTable.t,v 1.4 2009/10/26 20:38:39 Paulo Custodio Exp $
+# $Id: Table.t,v 1.1 2010/11/20 20:38:51 Paulo Exp $
 
 use warnings;
 use strict;
@@ -76,7 +76,7 @@ build_table(\%asm_table, 	Asm::Z80::Table->asm_table);
 build_table(\%disasm_table,	Asm::Z80::Table->disasm_table);
 
 # note that some byte sequences have more than one possible representation
-is scalar(keys %asm_table), 	2445, "assembly table";
+is scalar(keys %asm_table), 	2452, "assembly table";
 is scalar(keys %disasm_table), 	2384, "disassembly table";
 
 isa_ok my $iter = Asm::Z80::Table->iterator, 'CODE';
