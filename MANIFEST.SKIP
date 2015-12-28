@@ -7,6 +7,9 @@
 # temporary files
 \.tmp$
 
+# .git
+\B\.git\b
+
 #!start included C:\Perl\lib\ExtUtils\MANIFEST.SKIP
 # Avoid version control files.
 \bRCS\b
@@ -39,5 +42,3 @@
 # Avoid Devel::Cover files.
 \bcover_db\b
 #!end included C:\Perl\lib\ExtUtils\MANIFEST.SKIP
-
-
