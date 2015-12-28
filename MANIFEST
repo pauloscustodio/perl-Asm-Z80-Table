@@ -1,3 +1,4 @@
+.gitignore
 Changes
 lib/Asm/Z80/Table.pm
 Makefile.PL

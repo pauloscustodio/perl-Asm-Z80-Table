@@ -16,7 +16,7 @@ Asm::Z80::Table - Z80 assembly / disassembly tables
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 #------------------------------------------------------------------------------
 
