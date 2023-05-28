@@ -1,9 +1,10 @@
-#!perl
+#!/usr/bin/perl
 
 use strict;
 use warnings;
 use ExtUtils::MakeMaker;
-use 5.010;
+use 5.012;
+
 my $mm_ver = $ExtUtils::MakeMaker::VERSION;
 if ($mm_ver =~ /_/) {
     # developer release
@@ -15,9 +16,10 @@ if ($mm_ver =~ /_/) {
 # the contents of the Makefile that is written.
 WriteMakefile(
     NAME                => 'Asm::Z80::Table',
-    AUTHOR              => q{Paulo Custodio <pscust@cpan.org>},
+    AUTHOR          => 'Paulo Custodio <pscust@cpan.org>',
     VERSION_FROM        => 'lib/Asm/Z80/Table.pm',
     ABSTRACT_FROM       => 'lib/Asm/Z80/Table.pm',
+    DISTNAME        => 'Asm-Z80-Table',
     PL_FILES            => {},
     PREREQ_PM => {
         'Data::Dumper' 				=> 2.128,
@@ -31,12 +33,10 @@ WriteMakefile(
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
 
     ($mm_ver >= 6.48
-        ? (MIN_PERL_VERSION => 5.010)
+        ? (MIN_PERL_VERSION => 5.012)
         : ()
     ),
-
-    ($mm_ver >= 6.31 ? (LICENSE => 'perl_5_16') : ()),
-
+    ($mm_ver >= 6.31 ? (LICENSE => 'perl_5') : ()),
     ($mm_ver <= 6.45
         ? ()
         : (META_MERGE => {
@@ -44,8 +44,11 @@ WriteMakefile(
             resources => {
                 repository  => {
                     type => 'git',
-                    url  => 'git://github.com/pauloscustodio/perl-Asm-Z80-Table.git',
+                    url  => 'https://github.com/pauloscustodio/perl-Asm-Z80-Table.git',
                     web  => 'https://github.com/pauloscustodio/perl-Asm-Z80-Table',
+				},
+				bugtracker => {
+					web => 'https://github.com/pauloscustodio/perl-Asm-Z80-Table/issues',
                 },
             },
           })
