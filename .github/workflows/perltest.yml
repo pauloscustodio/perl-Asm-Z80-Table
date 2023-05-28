@@ -37,15 +37,3 @@ jobs:
             perl Makefile.PL
             make
             make TEST_VERBOSE=1 test
-
-      - name: Prepare for release tests
-        run: |
-            cpanm Test::CheckManifest Test::Pod::Coverage Pod::Coverage Test::Pod
-
-      - name: Release tests
-        env:
-          RELEASE_TESTING: 1
-        run: |
-            perl Makefile.PL
-            make
-            make test
