@@ -1,3 +1,4 @@
+.github/workflows/perltest.yml
 .gitignore
 Changes
 lib/Asm/Z80/Table.pm
